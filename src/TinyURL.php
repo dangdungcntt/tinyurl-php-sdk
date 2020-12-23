@@ -37,6 +37,6 @@ class TinyURL
 
         curl_close($curl);
 
-        return $response;
+        return is_string($response) ? $response : 'Error';
     }
 }
