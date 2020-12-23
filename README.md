@@ -1,26 +1,33 @@
-# :package_description
+# tinyurl-php-sdk
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:author_username/:package_name/run-tests?label=tests)](https://github.com/:author_username/:package_name/actions?query=workflow%3ATests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nddcoder/tinyurl-php-sdk.svg?style=flat-square)](https://packagist.org/packages/nddcoder/tinyurl-php-sdk)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/dangdungcntt/tinyurl-php-sdk/run-tests?label=tests)](https://github.com/dangdungcntt/tinyurl-php-sdk/actions?query=workflow%3ATests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/nddcoder/tinyurl-php-sdk.svg?style=flat-square)](https://packagist.org/packages/nddcoder/tinyurl-php-sdk)
 
-**Note:** Run `./configure-skeleton` to get started, or manually replace  ```:author_name``` ```:author_username``` ```:author_email``` ```:vendor_name``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](.github/CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can also run `configure-skeleton.sh` to do this automatically.
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+The simple wrapper for TinyURL api.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_name/:package_name
+composer require nddcoder/tinyurl-php-sdk
 ```
 
 ## Usage
 
+Short URL
+
 ```php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+$shortedUrl = Nddcoder\TinyURL\TinyURL::create('https://nddcoder.com');
+echo $shortedUrl; //https://tinyurl.com/ufvltuz
+```
+
+Preview Shorted URL
+
+```php
+$targetUrl = Nddcoder\TinyURL\TinyURL::preview('https://tinyurl.com/ufvltuz');
+echo $targetUrl; //https://nddcoder.com
 ```
 
 ## Testing
@@ -43,7 +50,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Dung Nguyen Dang](https://github.com/dangdungcntt)
 - [All Contributors](../../contributors)
 
 ## License

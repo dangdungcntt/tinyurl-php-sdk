@@ -1,21 +1,22 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "nddcoder/tinyurl-php-sdk",
+    "description": "",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "nddcoder",
+        "tinyurl-php-sdk"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/dangdungcntt/tinyurl-php-sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Dung Nguyen Dang",
+            "email": "dangdungcntt@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^7.4|^8.0",
+        "ext-curl": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3",
@@ -23,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Nddcoder\\TinyURL\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Nddcoder\\TinyURL\\Tests\\": "tests"
         }
     },
     "scripts": {
