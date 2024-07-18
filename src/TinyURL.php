@@ -12,11 +12,11 @@ class TinyURL
 
     public static function preview(string $url): ?string
     {
-        $previewUrl = str_replace('https://tinyurl.com', 'https://preview.tinyurl.com', $url);
+        $previewUrl = str_replace('https://tinyurl.com', 'https://tinyurl.com/preview', $url);
 
         $html = static::get($previewUrl);
 
-        preg_match('/<a id="redirecturl" href="(.*)">Proceed to this site/i', $html, $matches);
+        preg_match('/<a id="long-link" href="(.*)"/i', $html, $matches);
         return $matches[1] ?? null;
     }
 
